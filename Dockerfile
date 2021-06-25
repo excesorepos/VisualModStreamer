@@ -7,5 +7,5 @@ RUN addgroup -S visualmod && adduser -S visualmod -G visualmod
 RUN chown -R visualmod: /app
 USER visualmod
 WORKDIR /app
-RUN pip3 install -r /app/requirements.txt
+RUN pip3 install -r /app/requirements.txt --user
 CMD ["python", "/app/visualmod_streamer.py"]
